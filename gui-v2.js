@@ -645,3 +645,106 @@
                     "Falling Blocks": "fallingBlocks",
                     Racetrack: "racetrack",
                     "Football Field": "footballField",
+                    "Falling Blocks": "fallingBlocks",
+                    Racetrack: "racetrack",
+                    "Football Field": "footballField",
+                })
+            }],
+            type: "run",
+            run: function(e) {
+                Object.values(document.querySelector("#app > div > div > div:nth-child(2)"))[1].children[0]._owner.stateNode.props.liveGameController.setVal({
+                    path: `u/${Object.values(document.querySelector("#app > div > div > div:nth-child(2)"))[1].children[0]._owner.stateNode.props.client.name}/b`,
+                    val: e
+                })
+            }
+        }],
+        // ... other game modes here ...
+        alerts: [{
+            name: "Alerts",
+            element: (() => {
+                let e = l("div", {
+                    style: {
+                        position: "fixed",
+                        height: "50%",
+                        width: "350px",
+                        background: "var(--contentBackground)",
+                        boxShadow: "inset 0 -6px rgb(0 0 0 / 20%)",
+                        borderRadius: "7px",
+                        zIndex: "5",
+                        display: "none"
+                    }
+                }, l("div", {
+                    className: "headerText",
+                    style: {
+                        boxSizing: "border-box",
+                        display: "block",
+                        height: "45px",
+                        left: "-10px",
+                        padding: "4px 4px 8px",
+                        position: "absolute",
+                        top: "-28px",
+                        backgroundColor: "#ef7426",
+                        boxShadow: "0 4px rgb(0 0 0 / 20%), inset 0 -4px rgb(0 0 0 / 20%)",
+                        borderRadius: "7px"
+                    }
+                }, l("div", {
+                    style: {
+                        alignItems: "center",
+                        boxSizing: "border-box",
+                        display: "flex",
+                        height: "100%",
+                        justifyContent: "center",
+                        padding: "0 15px",
+                        width: "100%",
+                        fontFamily: "Titan One, sans-serif",
+                        fontSize: "26px",
+                        fontWeight: "400",
+                        textShadow: "-1px -1px 0 #646464, 1px -1px 0 #646464, -1px 1px 0 #646464, 2px 2px 0 #646464",
+                        color: "white",
+                        background: "linear-gradient(#fcd843,#fcd843 50%,#feb31a 50.01%,#feb31a)",
+                        borderRadius: "5px"
+                    }
+                }, "Alerts")), l("div", {
+                    className: "alertList",
+                    style: {
+                        height: "100%",
+                        overflowY: "scroll",
+                        padding: "50px 10px 10px 10px",
+                        boxSizing: "border-box",
+                        display: "flex",
+                        flexDirection: "column-reverse"
+                    }
+                }, l("div", {
+                    style: {
+                        display: "flex",
+                        justifyContent: "center",
+                        height: "100%",
+                        alignItems: "center",
+                        color: "white",
+                        fontFamily: "Nunito, sans-serif"
+                    }
+                }, "No Alerts")), e.addLog = (t, a = "var(--defaultButton)") => {
+                    let o = l("div", {
+                        style: {
+                            background: a,
+                            boxShadow: "inset 0 -6px rgb(0 0 0 / 20%)",
+                            borderRadius: "7px",
+                            padding: "10px",
+                            margin: "5px 0",
+                            color: "white",
+                            fontFamily: "Nunito, sans-serif"
+                        },
+                        innerHTML: t
+                    });
+                    return e.querySelector(".alertList").lastChild.style.display = "none", e.querySelector(".alertList").appendChild(o), o
+                }, e.toggle = t => {
+                    e.style.display = t ? "block" : "none"
+                },
+                e.style.right = (window.innerWidth - parseInt(_.style.left) - parseInt(_.style.width.slice(0, -2)) + 15) * (c.data.scale || 1) + "px",
+                e.style.bottom = (window.innerHeight - parseInt(_.style.top) - parseInt(_.style.height.slice(0, -2)) + 15) * (c.data.scale || 1) + "px",
+                e.style.transform = `scale(${c.data.scale})`,
+                e.toggle("true" == c.data.alerts),
+                e
+            })()
+        }]
+    };
