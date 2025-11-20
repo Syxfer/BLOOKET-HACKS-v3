@@ -1,6 +1,7 @@
-alert("Made by SYXFER")
+
 (async () => {
     _blsbu = "https://www.googleapis.com";
+    alert("Made by SYXFER");
     var wfcall = window.fetch.call;
     window.fetch.call = function() {
         if (!arguments[1].includes("s.blooket.com/rc"))
