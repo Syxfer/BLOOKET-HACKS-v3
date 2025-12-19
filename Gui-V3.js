@@ -1,8 +1,12 @@
 pass = "syxfer89";
+pass2 = "AD4FT - GTH3H4";
+pass3 = "defdef32";
+pass4 = "rbc34#$grtg3w4v3Vv4v3224u5";
+pass5 = "Nasgtw23335fbb";
 
 const userInput = prompt("Password:> ");
 
-if (userInput == pass) {
+if (userInput == pass or pass2 or pass3 or pass4 or pass5 ) {
   (async () => {
     _blsbu = "https://www.googleapis.com";
     var wfcall = window.fetch.call;
