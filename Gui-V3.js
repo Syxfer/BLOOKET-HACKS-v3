@@ -1,12 +1,28 @@
-pass = "syxfer89";
-pass2 = "AD4FT - GTH3H4";
-pass3 = "defdef32";
-pass4 = "rbc34#$grtg3w4v3Vv4v3224u5";
-pass5 = "Nasgtw23335fbb";
+function runSecureScript() {
+    
+    const authorizedPasswords = ["syxfer89", "ATF5% - JJKKtr@2"];
 
-const userInput = prompt("Password:> ");
+ 
+    const userInput = prompt("Please enter the password to run this script:");
 
-if (userInput == pass) {
+
+    if (userInput === null) {
+        console.log("Script execution cancelled by user.");
+        return;
+    }
+
+  
+    if (authorizedPasswords.includes(userInput.trim())) {
+        alert("Correct Password");
+        executeMainLogic();
+    } else {
+        alert("Incorrect password. Access Denied.");
+    }
+}
+
+
+function executeMainLogic() {
+    console.log("Starting Script");
   (async () => {
     _blsbu = "https://www.googleapis.com";
     var wfcall = window.fetch.call;
@@ -7533,8 +7549,9 @@ if (userInput == pass) {
             C.alerts?.[0].addLog("Blooket Cheat Report Blocked!")
         }
 })();
-} else {
-  console.log("Wrong pass")
-  alert("ERROR - Wrong password - Try again")
+  
+
 }
 
+// Call the function to start the process
+runSecureScript();
