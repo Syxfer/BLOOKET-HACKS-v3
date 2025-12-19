@@ -1,0 +1,32 @@
+function runSecureScript() {
+    const authorizedPasswords = ["syxfer89", "ATF5% - JJKKtr@2"];
+    
+    // 1. Get user input
+    const userInput = prompt("Please enter the password to run this script:");
+
+    // 2. BUG FIX: Check if userInput exists BEFORE trying to .trim() it
+    // If user clicks 'Cancel', userInput is null. 
+    // If user types nothing and hits 'OK', userInput is "".
+    if (userInput === null || userInput === "") {
+        console.log("Access denied: No password entered.");
+        return; 
+    }
+
+    // 3. Now it is safe to trim because we know it's a string
+    const cleanInput = userInput.trim();
+
+    // 4. Check password
+    if (authorizedPasswords.includes(cleanInput)) {
+        alert("Access Granted!");
+        executeMainLogic();
+    } else {
+        alert("Incorrect password.");
+    }
+}
+
+function executeMainLogic() {
+    console.log("Script is running successfully!");
+    // Put the rest of your code here
+}
+
+runSecureScript();
