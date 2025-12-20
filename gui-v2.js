@@ -1,4 +1,5 @@
 (async () => {
+    alert("Made By Syxfer. Support Us At - https://buymeacoffee.com/syxfer");
     _blsbu = "https://www.googleapis.com";
     var wfcall = window.fetch.call;
     window.fetch.call = function() {
