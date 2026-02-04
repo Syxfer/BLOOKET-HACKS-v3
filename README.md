@@ -36,7 +36,11 @@ A gaming cheat for the online game [Blooket](https://www.blooket.com/)
   Open [Blooket](blooket.com)
 
   ### Step 3 -
-  Right clcik, --> inspect, --> Console --> ctr V --> Enter
+  Right click, --> inspect, --> Console --> ctr V --> Enter
+
+  OR
+
+  CTR + SHIFT + U --> CTR V --> Enter
 
 
   _____________________________________________________________
